@@ -28,9 +28,9 @@ class experienceController extends Controller
     {
           //digunakan untuk menyimpan data yg blm selesai, dan hanya bisa 1 sesi saja
         Session::flash('judul', $request->judul);
-        Session::flash('judul', $request->info1);
-        Session::flash('judul', $request->tgl_mulai);
-        Session::flash('judul', $request->tgl_akhir);
+        Session::flash('info1', $request->info1);
+        Session::flash('tgl_mulai', $request->tgl_mulai);
+        Session::flash('tgl_akhir', $request->tgl_akhir);
         Session::flash('isi', $request->isi);
         $request->validate(
             [
