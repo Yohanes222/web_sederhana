@@ -14,11 +14,9 @@ class skillController extends Controller
     public function update(Request $request){
         $request->validate([
             '_language' => 'required',
-            '_workflow' => 'required',  
         ],
         [
             '_language.required' => 'Programming Language & tools wajib diisi',
-            '_workflow.required' => 'Workflow wajib diisi',
         ]);
         $data = [
             //diambil dari name pada form
