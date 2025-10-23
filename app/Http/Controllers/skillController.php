@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\metadata;
 use Illuminate\Http\Request;
 
 class skillController extends Controller
@@ -10,7 +11,21 @@ class skillController extends Controller
         return view ('dashboard.skill.index');
     }
 
-    public function update(){
-        return 'mantap';
+    public function update(Request $request){
+        $request->validate([
+            '_language' => 'required',
+            '_workflow' => 'required',  
+        ],
+        [
+            '_language.required' => 'Programming Language & tools wajib diisi',
+            '_workflow.required' => 'Workflow wajib diisi',
+        ]);
+        $data = [
+            //diambil dari name pada form
+            'meta_key' => $request->_language,
+            'meta_value' => $request->_workflow,
+        ];
+        metadata::create($data);
+        return redirect()->route('skill.index')->with('success','Data anda berhasil ditambah');
     }
 }
