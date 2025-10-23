@@ -3,7 +3,6 @@
 @section('konten')
     <form action="{{ route('skill.update') }}" method="post">
         @csrf
-        @method('put')
         <div class="mb-3">
             <label for="judul" class="form-label">Programming Language & Tools</label>
             <input type="text" class="form-control form-control-sm" name="_language" id="judul" aria-describedby="helpId"
@@ -18,4 +17,3 @@
                 Batal</a>
     </form>
 @endsection
-3
