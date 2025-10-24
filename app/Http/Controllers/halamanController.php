@@ -14,6 +14,7 @@ class halamanController extends Controller
     public function index()
     {
         $data = halaman::orderBy('judul')->get();
+        //with('data',$data) =  hanya bisa mengirim 1 variabel
         return view('dashboard.halaman.index')->with('data',$data);
     }
 
