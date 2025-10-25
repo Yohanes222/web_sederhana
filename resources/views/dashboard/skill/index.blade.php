@@ -14,7 +14,7 @@
             <textarea name="_workflow" id="isi" class="form-control summernote" rows="5">{{ get_meta_value('_workflow') }}</textarea>
         </div>
         <button class="btn btn-primary" name="simpan" type="submit">Simpan</button>
-        <a href="{{ route('halaman.index') }}" class="btn btn-danger">
+        <a href="{{ route('skill.index') }}" class="btn btn-danger">
             Batal</a>
     </form>
 @endsection

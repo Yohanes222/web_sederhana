@@ -16,15 +16,15 @@
                 </div>
                 <div class="mb-3">
                     <label for="_kota" class="form-label">Kota</label>
-                    <input type="text" class="form-control form-control-sm" name="_kota" id="_kota">
+                    <input type="text" class="form-control form-control-sm" name="_kota" id="_kota" value="{{ get_meta_value('_kota') }}">
                 </div>
                 <div class="mb-3">
                     <label for="_provinsi" class="form-label">Provinsi</label>
-                    <input type="text" class="form-control form-control-sm" name="_provinsi" id="_provinsi">
+                    <input type="text" class="form-control form-control-sm" name="_provinsi" id="_provinsi" value="{{ get_meta_value('_provinsi') }}">
                 </div>
                 <div class="mb-3">
                     <label for="_nohp" class="form-label">Nomor HP</label>
-                    <input type="text" class="form-control form-control-sm" name="_nohp" id="_nohp">
+                    <input type="text" class="form-control form-control-sm" name="_nohp" id="_nohp" value="{{ get_meta_value('_nohp') }}">
                 </div>
                 <div class="mb-3">
                     <label for="_email" class="form-label">Email</label>
@@ -35,24 +35,24 @@
                 <h3>Akun media sosial</h3>
                 <div class="mb-3">
                     <label for="_facebook" class="form-label">Facebook</label>
-                    <input type="text" class="form-control form-control-sm" name="_facebook" id="_facebook">
+                    <input type="text" class="form-control form-control-sm" name="_facebook" id="_facebook" value="{{ get_meta_value('_facebook') }}">
                 </div>
                 <div class="mb-3">
                     <label for="_twitter" class="form-label">Twitter</label>
-                    <input type="text" class="form-control form-control-sm" name="_twitter" id="_twitter">
+                    <input type="text" class="form-control form-control-sm" name="_twitter" id="_twitter" value="{{ get_meta_value('_twitter') }}">
                 </div>
                 <div class="mb-3">
                     <label for="_linkedin" class="form-label">LinkedIn</label>
-                    <input type="text" class="form-control form-control-sm" name="_linkedin" id="_linkedin">
+                    <input type="text" class="form-control form-control-sm" name="_linkedin" id="_linkedin" value="{{ get_meta_value('_linkedin') }}">
                 </div>
                 <div class="mb-3">
                     <label for="_github" class="form-label">GitHub</label>
-                    <input type="text" class="form-control form-control-sm" name="_github" id="_github">
+                    <input type="text" class="form-control form-control-sm" name="_github" id="_github" value="{{ get_meta_value('_github') }}">
                 </div>
             </div>
         </div>
         <button class="btn btn-primary" name="simpan" type="submit">Simpan</button>
-        <a href="{{ route('halaman.index') }}" class="btn btn-danger">
+        <a href="{{ route('profile.index') }}" class="btn btn-danger">
             Batal</a>
     </form>
 @endsection

@@ -7,6 +7,7 @@ use App\Http\Controllers\authController;
 use App\Http\Controllers\halamanController;
 use App\Http\Controllers\educationController;
 use App\Http\Controllers\experienceController;
+use App\Http\Controllers\pengaturanHalamanController;
 use App\Http\Controllers\profileController;
 use App\Http\Controllers\skillController;
 
@@ -34,5 +35,7 @@ Route::prefix('dashboard')->middleware('auth')->group(
         Route::post('skill',[skillController::class, 'update'])->name('skill.update');
         Route::get('profile',[profileController::class, 'index'])->name('profile.index');
         Route::post('profile',[profileController::class, 'update'])->name('profile.update');
+        Route::get('pengaturanhalaman',[pengaturanHalamanController::class, 'index'])->name('pengaturanhalaman.index');
+        Route::post('pengaturanhalaman',[pengaturanhalamanController::class, 'update'])->name('pengaturanhalaman.update');
     }
 );
