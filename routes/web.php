@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Doctrine\DBAL\Logging\Middleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\authController;
+use App\Http\Controllers\depanController;
 use App\Http\Controllers\halamanController;
 use App\Http\Controllers\educationController;
 use App\Http\Controllers\experienceController;
@@ -11,9 +12,8 @@ use App\Http\Controllers\pengaturanHalamanController;
 use App\Http\Controllers\profileController;
 use App\Http\Controllers\skillController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/',[depanController::class,"index"]);
 
 //Route::redirect('home','dashboard'); fungsi untuk memindahkan url dari home ke dashboard
 
