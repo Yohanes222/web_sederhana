@@ -16,7 +16,7 @@ class pengaturanHalamanController extends Controller
     public function update (Request $request){
         metadata::updateOrCreate(['meta_key' => '_halaman_about'],['meta_value' => $request->_halaman_about]);
         metadata::updateOrCreate(['meta_key' => '_halaman_interest'],['meta_value' => $request->_halaman_interest]);
-        metadata::updateOrCreate(['meta_key' => '_halaman_award'],['meta_value' => $request->_halaman_awards]);
+        metadata::updateOrCreate(['meta_key' => '_halaman_award'],['meta_value' => $request->_halaman_award]);
         return redirect()->route('pengaturanhalaman.index')->with('success', 'Data anda berhasil diubah');
     }
-}
+} 
